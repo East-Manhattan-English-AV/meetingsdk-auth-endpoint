@@ -41,8 +41,8 @@ app.post('/', (req, res) => {
   const oHeader = { alg: 'HS256', typ: 'JWT' }
 
   const oPayload = {
-    appKey: process.env.ZOOM_MEETING_SDK_KEY,
-    sdkKey: process.env.ZOOM_MEETING_SDK_KEY,
+    appKey: process.env.REACT_APP_ZOOM_MEETING_SDK_KEY,
+    sdkKey: process.env.REACT_APP_ZOOM_MEETING_SDK_KEY,
     mn: meetingNumber,
     role,
     iat,
@@ -53,8 +53,9 @@ app.post('/', (req, res) => {
 
   const sHeader = JSON.stringify(oHeader)
   const sPayload = JSON.stringify(oPayload)
-  const sdkJWT = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, process.env.ZOOM_MEETING_SDK_SECRET)
-  return res.json({ signature: sdkJWT, sdkKey: process.env.ZOOM_MEETING_SDK_KEY })
+  const sdkJWT = KJUR.jws.JWS.sign('HS256', sHeader, sPayload, process.env.REACT_APP_ZOOM_MEETING_SDK_SECRET)
+  res.set('Access-Control-Allow-Origin', '*')
+  return res.json({ signature: sdkJWT, sdkKey: process.env.REACT_APP_ZOOM_MEETING_SDK_KEY })
 })
 
 app.listen(port, () => console.log(`Zoom Meeting SDK Auth Endpoint Sample Node.js, listening on port ${port}!`))
