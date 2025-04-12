@@ -5,12 +5,12 @@
   "logo": "https://avatars1.githubusercontent.com/u/29114944?s=200&v=4",
   "keywords": ["zoom", "meetingsdk", "jwt", "node.js", "express"],
   "env": {
-    "ZOOM_MEETING_SDK_KEY": {
+    "REACT_APP_ZOOM_MEETING_SDK_KEY": {
       "description": "Your Zoom Meeting SDK Key or Client ID for Meeting SDK app type's created after February 11, 2023, found on your Zoom Meeting SDK app's credentials page",
       "value": "",
       "required": true
     },
-    "ZOOM_MEETING_SDK_SECRET": {
+    "REACT_APP_ZOOM_MEETING_SDK_SECRET": {
       "description": "Your Zoom Meeting SDK Secret or Client Secret for Meeting SDK app type's created after February 11, 2023, found on your Zoom Meeting SDK app's credentials page",
       "value": "",
       "required": true
