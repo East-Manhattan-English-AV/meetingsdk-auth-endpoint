@@ -1,51 +1,24 @@
 {
   "type": "module",
-  "name": "Zoom Attendant Meeting Authenticator",
+  "name": "meetingsdk-auth-endpoint",
   "version": "3.12.0",
   "description": "Generate a Zoom Meeting SDK JWT to join Zoom meetings with the Zoom Meeting SDK.",
   "main": "src/index.js",
   "scripts": {
     "format": "prettier --write src/*.js",
     "prepare": "husky",
-    "start": "node src/index.js",
-    "build": "react-scripts build"
+    "start": "node src/index.js"
   },
   "author": "Jonathan Holland",
-  "contributors": [
-    {
-      "name": "Tommy Gaessler"
-    },
-    {
-      "name": "James Coon"
-    },
-    {
-      "name": "EkaanshArora"
-    }
-  ],
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "jsrsasign": "^11.1.0",
-    "react-scripts": "5.0.1"
+    "jsrsasign": "^11.1.0"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "node-polyfill-webpack-plugin": "^4.1.0",
-    "prettier": "^3.5.3",
-    "react-app-rewired": "^2.2.1"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "prettier": "^3.5.3"
   }
 }
