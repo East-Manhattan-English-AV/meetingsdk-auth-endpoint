@@ -20,10 +20,6 @@
 				{
 					"key": "Cache-Control",
 					"value": "no-cache"
-				},
-				{
-					"key": "Access-Control-Allow-Origin",
-					"value": "*"
 				}
 			]
 		},
@@ -33,10 +29,27 @@
 				{
 					"key": "Cache-Control",
 					"value": "no-cache"
-				},
+				}
+			]
+		},
+		{
+			"source": "**",
+			"headers": [
 				{
 					"key": "Access-Control-Allow-Origin",
-					"value": "*"
+					"value": "*" // Allow all origins (you can restrict this later)
+				},
+				{
+					"key": "Access-Control-Allow-Methods",
+					"value": "GET, POST, PUT, DELETE, OPTIONS"
+				},
+				{
+					"key": "Access-Control-Allow-Headers",
+					"value": "Content-Type, Authorization"
+				},
+				{
+					"key": "Access-Control-Max-Age",
+					"value": "3600"
 				}
 			]
 		}
